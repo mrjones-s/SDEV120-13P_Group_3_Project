@@ -1,0 +1,22 @@
+start
+define stateTax, federalTax, grossPay, netPay, stateTaxDeduction, federalTaxDeduction, totalTaxDeduction,
+
+input grossPay = float(input (“Enter Gross Pay:  “))
+     if grossPay >= 0:
+    else:  print(“Gross Pay Cannot Be Negative. Please Enter A Valid Amount.”)
+    except ValueError:
+    print(“Invalid Input. Please Enter A Numeric Value For Gross Pay.”)
+
+stateTax = .056
+federalTax = .079
+stateTaxDeduction = stateTax * grossPay
+federalTaxDeduction = federalTax * grossPay
+totalTaxDeduction = stateTaxDeduction + federalTaxDeduction
+netPay = grossPay - totalTaxDeduction
+
+print("Gross Pay: ", grossPay)
+print("State Taxes: ", stateTaxDeduction)
+print("Federal Taxes: ", federalTaxDeduction)
+print("Total Taxes: ", totalTaxDeduction)
+print("Net Pay: ", netPay)
+end
